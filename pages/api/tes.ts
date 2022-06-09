@@ -9,6 +9,7 @@ export default async function handler(
         select: {
             email: true,
             name: true,
+            id: true,
         },
     })
     res.status(200).json(user)

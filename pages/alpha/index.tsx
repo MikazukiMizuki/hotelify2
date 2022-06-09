@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Page } from "../../types";
 
-function Index() {
+const Index: Page = (props) => {
   const [data, setData] = useState<any>(null);
   const [isLoading, setLoading] = useState(false);
 
@@ -18,16 +19,18 @@ function Index() {
   if (!data) return <p>No profile data</p>;
 
   interface User {
+    id: string;
     email: number;
     name: string;
   }
+
   return (
     <ul>
       {data.map((post: User) => (
-        <li>{post.name}</li>
+        <li key={post.id}>{post.name}</li>
       ))}
     </ul>
   );
-}
+};
 
 export default Index;
