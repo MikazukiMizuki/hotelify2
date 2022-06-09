@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function index() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<any>(null);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {
