@@ -13,11 +13,12 @@ datasource db {
 model User {
   id            String        @id @default(cuid())
   name          String?
+  password      String
   email         String?       @unique
   emailVerified DateTime?     @map("email_verified")
   image         String?
   createdAt     DateTime      @default(now()) @map(name: "created_at")
-  updatedAt     DateTime?      @updatedAt @map(name: "updated_at")
+  updatedAt     DateTime?     @updatedAt @map(name: "updated_at")
   Transaction   Transaction[]
   accounts      Account[]
   sessions      Session[]
