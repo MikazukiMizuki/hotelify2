@@ -17,9 +17,13 @@ function index() {
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
 
+  interface User {
+    email: number;
+    name: string;
+  }
   return (
     <ul>
-      {data.map((post) => (
+      {data.map((post: User) => (
         <li>{post.name}</li>
       ))}
     </ul>
