@@ -45,7 +45,7 @@ const Login = () => {
                         <Form.Label>Email Address</Form.Label>
                         <FormControl type="email" placeholder="Enter email" />
                         <Form.Text className="text-muted">
-                          We'll never share your email with anyone else.
+                          We&apos;ll never share your email with anyone else.
                         </Form.Text>
                       </Form.Group>
 
@@ -73,7 +73,7 @@ const Login = () => {
 
                       <div className="mb-4">
                         <p style={{ color: "#393f81" }}>
-                          Don't have an account?{" "}
+                          Don&apos;t have an account?{" "}
                           <Link href="/Register" style={{ color: "#393f81" }}>
                             Register here
                           </Link>

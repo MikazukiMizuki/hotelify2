@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function index() {
+function Index() {
   const [data, setData] = useState<any>(null);
   const [isLoading, setLoading] = useState(false);
 
@@ -30,4 +30,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;
