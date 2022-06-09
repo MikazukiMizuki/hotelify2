@@ -14,13 +14,11 @@ function MyApp({ Component, pageProps }: Props) {
   const getLayout =
     Component.getLayout ||
     ((page) => (
-      <>
-        <SessionProvider session={pageProps.session}>
-          <Navigation />
-          {page}
-          <Footer />
-        </SessionProvider>
-      </>
+      <SessionProvider session={pageProps.session}>
+        <Navigation />
+        {page}
+        <Footer />
+      </SessionProvider>
     ));
   return getLayout(<Component {...pageProps} />);
 }
