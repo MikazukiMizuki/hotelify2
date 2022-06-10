@@ -14,7 +14,7 @@ const Index: Page = (props) => {
         setLoading(false);
       });
   }, []);
-
+  
   if (isLoading) return <p>Loading...</p>;
   if (!data) return <p>No profile data</p>;
 
