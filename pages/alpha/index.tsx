@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import internal from "stream";
 import { Page } from "../../types";
 
 const Index: Page = (props) => {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<User[] | null>(null);
   const [isLoading, setLoading] = useState(false);
 
   useEffect(() => {

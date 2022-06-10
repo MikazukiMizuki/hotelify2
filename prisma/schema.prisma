@@ -13,13 +13,13 @@ datasource db {
 
 model User {
   id            Int           @id @default(autoincrement())
-  name          String?
+  name          String
   password      String
-  email         String?       @unique
+  email         String        @unique
   emailVerified DateTime?     @map("email_verified")
   image         String?
   createdAt     DateTime      @default(now()) @map(name: "created_at")
-  updatedAt     DateTime?     @updatedAt @map(name: "updated_at")
+  updatedAt     DateTime      @default(now()) @updatedAt @map(name: "updated_at")
   Transaction   Transaction[]
   accounts      Account[]
   sessions      Session[]
@@ -29,10 +29,10 @@ model User {
 
 model Room {
   id          Int           @id @default(autoincrement())
-  roomName    String
+  name        String
   desc        String?
-  status      Boolean       @default(false)
-  price       Int
+  status      Boolean      @default(false)
+  price       Int?
   hotel       Hotel         @relation(fields: [hotelId], references: [id])
   hotelId     Int
   Transaction Transaction[]
@@ -42,7 +42,7 @@ model Room {
 
 model Hotel {
   id    Int     @id @default(autoincrement())
-  name  String
+  name  String?
   desc  String?
   email String
   Rooms Room[]
