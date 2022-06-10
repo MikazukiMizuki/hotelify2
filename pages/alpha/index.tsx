@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import internal from "stream";
 import { Page } from "../../types";
 
 const Index: Page = (props) => {
@@ -19,7 +20,7 @@ const Index: Page = (props) => {
   if (!data) return <p>No profile data</p>;
 
   interface User {
-    id: string;
+    id: number;
     email: number;
     name: string;
   }
