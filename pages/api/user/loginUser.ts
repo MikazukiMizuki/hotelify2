@@ -13,10 +13,8 @@ export default async function handler(
         },
     })
     if (bcrypt.compareSync(password, hash)) {
-        res.status(200).json(result)
     }
     else {
-        res.status(405);
-        res.end();
+        res.status(405)
     }
 }

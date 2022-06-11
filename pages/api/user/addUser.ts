@@ -14,5 +14,5 @@ export default async function handler(
             password: hash,
         },
     })
-    res.status(200).json(result)
+    res.status(200).json({result})
 }

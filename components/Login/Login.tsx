@@ -12,7 +12,7 @@ const Login = () => {
   const router = useRouter();
 
   const onSubmitForm = async () => {
-    await fetch("api/user/loginUser", {
+    const result = await fetch("api/user/loginUser", {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
@@ -23,7 +23,7 @@ const Login = () => {
       }),
       method: "POST",
     });
-    router.push("/Register");
+    if (result == "ok") router.push("/Register");
   };
   return (
     <Card className="vh-100 bg-dark">

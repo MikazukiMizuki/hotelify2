@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: Props) {
     ((page) => (
       <SessionProvider session={pageProps.session}>
         <Navigation />
-        {page}
+        <Component {...pageProps}/>
         <Footer />
       </SessionProvider>
     ));
