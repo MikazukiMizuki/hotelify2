@@ -11,6 +11,7 @@ type Props = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: Props) {
+  
   const getLayout =
     Component.getLayout ||
     ((page) => (
