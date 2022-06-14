@@ -4,6 +4,7 @@ import { Nav, Button } from "react-bootstrap";
 import "./Navigation.module.css";
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
+import { Logo } from "../../import/importAssets";
 
 const Navigation = () => {
   const { user, error, isLoading } = useUser();
@@ -14,7 +15,7 @@ const Navigation = () => {
           <ul className="nav navbar-nav">
             <li>
               <Nav.Item>
-                <Nav.Link href="/">Hotelify</Nav.Link>
+                <Image src={Logo} width={40} height={40}></Image>
               </Nav.Item>
             </li>
             <li>
@@ -71,7 +72,7 @@ const Navigation = () => {
         <ul className="nav navbar-nav">
           <li>
             <Nav.Item>
-              <Nav.Link href="/">Hotelify</Nav.Link>
+              <Image src={Logo} width={40} height={40}></Image>
             </Nav.Item>
           </li>
           <li>
