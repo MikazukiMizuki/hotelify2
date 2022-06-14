@@ -28,9 +28,9 @@ model Hotel {
   id    Int     @id @default(autoincrement())
   name  String?
   desc  String?
-  email String
-  link1 String
-  link2 String
+  email String?
+  link1 String?
+  link2 String?
   Rooms Room[]
 
   @@map(name: "hotels")
