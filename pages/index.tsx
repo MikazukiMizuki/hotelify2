@@ -1,9 +1,12 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { Card, Container } from "react-bootstrap";
 import { Rising, Discount } from "../import/importAssets";
 import Image from "next/image";
 import { Page } from "../types";
 import "../styles/Home.module.css";
+import { Auth0Provider } from "@auth0/auth0-react";
+import MyApp from "./_app";
 // import prisma from "../lib/prisma";
 // import { GetStaticProps } from "next";
 
