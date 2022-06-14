@@ -7,6 +7,7 @@ export default async function handler(
 ) {
     const result = await prisma.hotel.findMany({
         select: {
+            id: true,
             name: true,
             desc: true,
             email: true,
