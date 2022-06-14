@@ -1,0 +1,5 @@
+.borderThick{
+    border-width: 10px;
+    border-color: aqua;
+    z-index: 5;
+}

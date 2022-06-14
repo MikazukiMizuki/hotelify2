@@ -8,7 +8,7 @@ import BgMain from "../assets/BackgroundMain.jpg";
 import Rising from "../assets/BackgroundRising.jpg";
 import Discount from "../assets/BackgroundDiscount.jpg";
 import Logo from "../assets/logo.png";
-
+import Building from "../assets/HotelBuilding.jpg";
 export {
   Story,
   Vision,
@@ -20,4 +20,5 @@ export {
   Rising,
   Discount,
   Logo,
+  Building,
 };
