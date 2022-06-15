@@ -1,26 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Card, Container, Button } from "react-bootstrap";
 import Link from "next/link";
-import "./Hotel.module.css"
-// import { useUser } from "@auth0/nextjs-auth0";
+import "./Hotel.module.css";
 import { Building } from "../../import/importAssets";
 import Image from "next/image";
-import {
-  FiFacebook,
-  FiTwitter,
-  FiInstagram,
-  FiYoutube,
-  FiLinkedin,
-} from "react-icons/fi";
 
 const Hotel = () => {
-  // const { user } = useUser();
   const [data, setData] = useState<Hotel[] | null>(null);
   const [isLoading, setLoading] = useState(false);
+  const route = "Hotel/[id]";
 
   useEffect(() => {
     setLoading(true);
-    fetch("api/hotel/getHotel")
+    fetch("api/hotel/getHotels")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -38,8 +30,8 @@ const Hotel = () => {
     location: string;
   }
 
-  if(isLoading){
-    return <div>Loading...</div>
+  if (isLoading) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -65,7 +57,12 @@ const Hotel = () => {
                 <h6 className="card-subtitle my-2 text-muted">
                   {hotel.location}
                 </h6>
-                <Link href="">
+                <Link
+                  href={{
+                    pathname: route,
+                    query: { id: hotel.id },
+                  }}
+                >
                   <Button variant="outline-primary">See more..</Button>
                 </Link>
               </div>
