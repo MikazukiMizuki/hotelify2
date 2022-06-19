@@ -1,7 +1,8 @@
 import React from "react";
 
 const roomId = () => {
-  return <div>roomId</div>;
+  return <>
+  </>;
 };
 
 export default roomId;

@@ -1,7 +1,10 @@
 import React from "react";
+import HotelDetail from "../../../components/HotelDetail/HotelDetail";
 
 const hotelId = () => {
-  return <div>Tes</div>;
+  return <>
+  <HotelDetail />
+  </>;
 };
 
 export default hotelId;

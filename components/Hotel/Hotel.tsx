@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Card, Container, Button } from "react-bootstrap";
-import Link from "next/link";
 import "./Hotel.module.css";
 import { Building } from "../../import/importAssets";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const Hotel = () => {
   const [data, setData] = useState<Hotel[] | null>(null);
   const [isLoading, setLoading] = useState(false);
-  const route = "Hotel/[id]";
+  const router = useRouter();
 
   useEffect(() => {
     setLoading(true);
@@ -57,14 +57,17 @@ const Hotel = () => {
                 <h6 className="card-subtitle my-2 text-muted">
                   {hotel.location}
                 </h6>
-                <Link
-                  href={{
-                    pathname: route,
-                    query: { id: hotel.id },
-                  }}
+                <Button
+                  variant="outline-primary"
+                  onClick={() =>
+                    router.push({
+                      pathname: '/Hotel/[hotelId]',
+                      query: { hotelId: hotel.id },
+                    })
+                  }
                 >
-                  <Button variant="outline-primary">See more..</Button>
-                </Link>
+                  See more &rarr
+                </Button>
               </div>
             </div>
           ))}
