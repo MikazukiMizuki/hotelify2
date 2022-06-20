@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Card, Container } from "react-bootstrap";
+import { Button, Card, Container } from "react-bootstrap";
+import { Room } from "../../import/importAssets";
+import Image from "next/image";
 
 const HotelDetail = () => {
   const [hotel, setHotel] = useState<Hotel[] | null>(null);
@@ -72,12 +74,14 @@ const HotelDetail = () => {
       <Card className="py-lg-4">
         <Container className="bg-warning">
           {hotel?.map((hotel: Hotel) => (
-            <>
+            <React.Fragment key={`hotel-${hotel.id}`}>
               <div className="header py-md-2">
                 <h1>Hotel {hotel.name}</h1>
               </div>
-              <div className="header py-md-1">{hotel.desc}</div>
-            </>
+              <div className="header py-md-1">
+                <p className="">{hotel.desc}</p>
+              </div>
+            </React.Fragment>
           ))}
           <div>
             <h2>Room List</h2>
@@ -85,12 +89,23 @@ const HotelDetail = () => {
           <div className="d-flex flex-wrap flex">
             {room?.map((room: Room) => (
               <div
-                className="card  my-md-3 mx-lg-4"
-                style={{ width: "17rem", height: "18rem" }}
-                key={room.id}
+                className="card  my-md-2 mx-md-4"
+                style={{ width: "17rem", height: "17rem" }}
+                key={`room-${room.id}`}
               >
                 <div className="card-body">
                   <h5 className="card-title">Room {room.name}</h5>
+                  <Image
+                    className="my-md-1"
+                    src={Room}
+                    layout="responsive"
+                  ></Image>
+                  <div className="my-md-3 justify-content-between d-flex align-items-end">
+                    <Button variant="success">{room.status}</Button>
+                    <div className="p-md-2 bg-info text-light rounded">
+                      Rp {room.price},--
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}
