@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Card, Container, Button } from "react-bootstrap";
-import Link from "next/link";
 import "./Hotel.module.css";
 import { Building } from "../../import/importAssets";
 import Image from "next/image";

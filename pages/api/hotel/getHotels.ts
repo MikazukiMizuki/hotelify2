@@ -15,6 +15,9 @@ export default async function handler(
             link2: true,
             location: true,
         },
+        orderBy: {
+            name: "asc",
+        }
     })
     res.status(200).json(result)
 }

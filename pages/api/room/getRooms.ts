@@ -17,6 +17,9 @@ export default async function handler(
         },
         where: {
             hotelId: +uniqueId,
+        },
+        orderBy: {
+            id: "asc",
         }
     })
     res.status(200).json(result)
