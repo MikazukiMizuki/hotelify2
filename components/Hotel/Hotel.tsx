@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Container, Button } from "react-bootstrap";
+import Link from "next/link";
 import "./Hotel.module.css";
 import { Building } from "../../import/importAssets";
 import Image from "next/image";
@@ -38,7 +39,7 @@ const Hotel = () => {
     <Card className="bg-danger">
       <Container className="py-lg-4">
         <div>
-          <h1 className="">This Is Our Hotel List!</h1>
+          <h1 className="">Hotel List</h1>
         </div>
         <div className="d-flex flex-wrap flex">
           {data?.map((hotel: Hotel) => (
@@ -55,18 +56,18 @@ const Hotel = () => {
                   layout="responsive"
                 ></Image>
                 <h6 className="card-subtitle my-2 text-muted">
-                  {hotel.location}
+                  <p className="text-justify">{hotel.location}</p>
                 </h6>
                 <Button
                   variant="outline-primary"
                   onClick={() =>
                     router.push({
-                      pathname: '/Hotel/[hotelId]',
+                      pathname: "/Hotel/[hotelId]",
                       query: { hotelId: hotel.id },
                     })
                   }
                 >
-                  See more &rarr
+                  See more &rarr;
                 </Button>
               </div>
             </div>

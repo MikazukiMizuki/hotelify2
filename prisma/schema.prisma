@@ -13,9 +13,9 @@ datasource db {
 
 model Room {
   id          Int           @id @default(autoincrement())
-  name        String
+  name        String?
   desc        String?
-  status      Boolean       @default(false)
+  status      String?       @default("Open")
   price       Int?
   hotel       Hotel         @relation(fields: [hotelId], references: [id])
   hotelId     Int
