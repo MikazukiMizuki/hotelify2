@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
 import { Room } from "../../import/importAssets";
 import Image from "next/image";
+import router, { useRouter } from "next/router";
 
 const HotelDetail = () => {
   const [hotel, setHotel] = useState<Hotel[] | null>(null);
   const [room, setRoom] = useState<Room[] | null>(null);
   const [isLoading, setLoading] = useState(false);
+  const router = useRouter();
 
   if (typeof window !== "undefined") {
     var url = window.location.pathname;
@@ -66,7 +68,15 @@ const HotelDetail = () => {
   }
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Card>
+          <Container>
+            <div>Loading...</div>
+          </Container>
+        </Card>
+      </>
+    );
   }
 
   return (
@@ -101,7 +111,17 @@ const HotelDetail = () => {
                     layout="responsive"
                   ></Image>
                   <div className="my-md-3 justify-content-between d-flex align-items-end">
-                    <Button variant="success">{room.status}</Button>
+                    <Button
+                      variant="success"
+                      onClick={() =>
+                        router.push({
+                          pathname: `/Hotel/[hotelId]/[roomId]`,
+                          query: { roomId: room.id, hotelId: hotelId },
+                        })
+                      }
+                    >
+                      {room.status}
+                    </Button>
                     <div className="p-md-2 bg-info text-light rounded">
                       Rp {room.price},--
                     </div>

@@ -31,7 +31,15 @@ const Hotel = () => {
   }
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return (
+      <>
+        <Card>
+          <Container>
+            <div>Loading...</div>
+          </Container>
+        </Card>
+      </>
+    );
   }
 
   return (
