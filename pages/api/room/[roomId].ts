@@ -13,7 +13,6 @@ export default async function handler(
             desc: true,
             status: true,
             price: true,
-            hotelId: true,
         },
         where: {
             id: uniqueId,
