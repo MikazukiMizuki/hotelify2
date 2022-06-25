@@ -9,7 +9,9 @@ import Rising from "../assets/BackgroundRising.jpg";
 import Discount from "../assets/BackgroundDiscount.jpg";
 import Logo from "../assets/logo.png";
 import Building from "../assets/HotelBuilding.jpg";
-import Room from "../assets/Room.jpg"
+import RoomImg from "../assets/Room.jpg"
+import RoomImg2 from "../assets/Room2.jpg";
+
 export {
   Story,
   Vision,
@@ -22,5 +24,6 @@ export {
   Discount,
   Logo,
   Building,
-  Room,
+  RoomImg,
+  RoomImg2,
 };
