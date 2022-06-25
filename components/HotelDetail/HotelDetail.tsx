@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card, Container } from "react-bootstrap";
-import { Room } from "../../import/importAssets";
+import { RoomImg } from "../../import/importAssets";
 import Image from "next/image";
-import router, { useRouter } from "next/router";
+import { useRouter } from "next/router";
 
 const HotelDetail = () => {
   const [hotel, setHotel] = useState<Hotel[] | null>(null);
@@ -107,7 +107,7 @@ const HotelDetail = () => {
                   <h5 className="card-title">Room {room.name}</h5>
                   <Image
                     className="my-md-1"
-                    src={Room}
+                    src={RoomImg}
                     layout="responsive"
                   ></Image>
                   <div className="my-md-3 justify-content-between d-flex align-items-end">
@@ -115,7 +115,7 @@ const HotelDetail = () => {
                       variant="success"
                       onClick={() =>
                         router.push({
-                          pathname: `/Hotel/[hotelId]/[roomId]`,
+                          pathname: '/Hotel/[hotelId]/[roomId]',
                           query: { roomId: room.id, hotelId: hotelId },
                         })
                       }
