@@ -44,6 +44,7 @@ model Transaction {
   roomId        Int
   createdAt     DateTime @default(now()) @map(name: "created_at")
   updatedAt     DateTime @updatedAt @map(name: "updated_at")
+  status        String   @default("On Going")
 
   @@map(name: "transactions")
 }
