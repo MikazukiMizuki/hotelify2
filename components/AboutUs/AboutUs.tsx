@@ -89,17 +89,18 @@ const AboutUs = () => {
           <div className="col-md-3 col-lg-6">
             <h1 className="text-primary text-opacity-75">Executives</h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-              ullam laudantium ut saepe laboriosam est iusto vitae hic
-              consequuntur, possimus temporibus natus consequatur. Velit saepe
-              voluptatem illo dolor, aperiam itaque.
+              Our founder is Vincent Gunardi, he stand along his two friend as
+              his co-founder, Winston Adinata and Aldo Gunaidi. After a long
+              process of brainstorming and throwing a lot of wild idea, we have
+              come to this stage as we successfully the wild plan that no-one
+              ever expect from us.
             </p>
 
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia
-              illum quibusdam culpa doloremque sit consequatur, hic alias nulla
-              optio aspernatur rerum, ut dolorem dolor voluptatem accusantium,
-              debitis aperiam harum rem?
+              After a long process, we have come to a decision that we will aim
+              to make this business a successfull one for our fate too. It is
+              not an easy path to take, but we will try our best to do that.
+              Good Luck, and adios!
             </p>
           </div>
           <div className="col-md-3 col-lg-6 d-none d-lg-block">
