@@ -87,7 +87,7 @@ const Navigation = () => {
           </li>
           <li>
             <Nav.Item>
-              <Nav.Link href="/">Booking History</Nav.Link>
+              <Nav.Link href="/History">Booking History</Nav.Link>
             </Nav.Item>
           </li>
           <li>
