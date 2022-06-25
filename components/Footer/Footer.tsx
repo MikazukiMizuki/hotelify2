@@ -25,10 +25,7 @@ const Footer = () => {
                 <Card.Title>Company</Card.Title>
               </div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, atque. Exercitationem quos commodi sit nesciunt
-                explicabo corporis, repudiandae a suscipit quasi ratione minus
-                aperiam unde deleniti sapiente iste ducimus quis?
+                Hotelify.com will try to make all of the traveller around the nation feel the greatest service in their traveling across this nation. We will try our best not to dissapoint our customer because all of the customer is our loyal King.
               </p>
             </div>
 
