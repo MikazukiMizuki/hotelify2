@@ -11,20 +11,19 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const router = useRouter();
 
-  const onSubmitForm = async () => {
-    const result = await fetch("api/user/loginUser", {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        password,
-      }),
-      method: "POST",
-    });
-    if (result == "ok") router.push("/Register");
-  };
+  // const onSubmitForm = async () => {
+  //   const result = await fetch("api/user/loginUser", {
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       email,
+  //       password,
+  //     }),
+  //     method: "POST",
+  //   });
+  // };
   return (
     <Card className="vh-100 bg-dark">
       <Container className="h-100">
@@ -87,11 +86,7 @@ const Login = () => {
                       </Form.Group>
 
                       <div className="my-4">
-                        <Button
-                          variant="primary"
-                          type="submit"
-                          onClick={onSubmitForm}
-                        >
+                        <Button variant="primary" type="submit">
                           Login
                         </Button>
                       </div>
