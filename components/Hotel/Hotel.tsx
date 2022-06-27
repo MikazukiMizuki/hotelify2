@@ -53,30 +53,31 @@ const Hotel = () => {
             <div
               className="card  my-md-3 mx-lg-4"
               style={{ width: "17rem", height: "18rem" }}
-              key={hotel.id}
             >
-              <div className="card-body">
-                <h5 className="card-title">Hotel {hotel.name}</h5>
-                <Image
-                  className="my-md-1"
-                  src={Building}
-                  layout="responsive"
-                ></Image>
-                <h6 className="card-subtitle my-2 text-muted">
-                  <p className="text-justify">{hotel.location}</p>
-                </h6>
-                <Button
-                  variant="outline-primary"
-                  onClick={() =>
-                    router.push({
-                      pathname: "/Hotel/[hotelId]",
-                      query: { hotelId: hotel.id },
-                    })
-                  }
-                >
-                  See more &rarr;
-                </Button>
-              </div>
+              <React.Fragment key={hotel.id}>
+                <div className="card-body">
+                  <h5 className="card-title">Hotel {hotel.name}</h5>
+                  <Image
+                    className="my-md-1"
+                    src={Building}
+                    layout="responsive"
+                  ></Image>
+                  <h6 className="card-subtitle my-2 text-muted">
+                    <p className="text-justify">{hotel.location}</p>
+                  </h6>
+                  <Button
+                    variant="outline-primary"
+                    onClick={() =>
+                      router.push({
+                        pathname: "/Hotel/[hotelId]",
+                        query: { hotelId: hotel.id },
+                      })
+                    }
+                  >
+                    See more &rarr;
+                  </Button>
+                </div>
+              </React.Fragment>
             </div>
           ))}
         </div>
