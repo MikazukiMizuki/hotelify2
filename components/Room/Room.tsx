@@ -76,8 +76,8 @@ const Room = () => {
       <Card className="py-lg-4">
         <Container className="bg-warning">
           {room?.map((room: Room) => (
-            <div className="pb-md-3">
-              <React.Fragment key={room.id}>
+            <React.Fragment key={room.id}>
+              <div className="pb-md-3">
                 <div className="header py-md-2 d-flex justify-content-between">
                   <h1>Room {room.name}</h1>
                   <div className="d-flex align-items-end my-md-2">
@@ -120,8 +120,8 @@ const Room = () => {
                     Book
                   </Button>
                 </div>
-              </React.Fragment>
-            </div>
+              </div>
+            </React.Fragment>
           ))}
         </Container>
       </Card>

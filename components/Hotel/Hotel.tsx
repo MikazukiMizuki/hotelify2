@@ -50,11 +50,12 @@ const Hotel = () => {
         </div>
         <div className="d-flex flex-wrap flex">
           {data?.map((hotel: Hotel) => (
-            <div
-              className="card  my-md-3 mx-lg-4"
-              style={{ width: "17rem", height: "18rem" }}
-            >
-              <React.Fragment key={hotel.id}>
+            <React.Fragment key={hotel.id}>
+              {" "}
+              <div
+                className="card  my-md-3 mx-lg-4"
+                style={{ width: "17rem", height: "18rem" }}
+              >
                 <div className="card-body">
                   <h5 className="card-title">Hotel {hotel.name}</h5>
                   <Image
@@ -77,8 +78,8 @@ const Hotel = () => {
                     See more &rarr;
                   </Button>
                 </div>
-              </React.Fragment>
-            </div>
+              </div>
+            </React.Fragment>
           ))}
         </div>
       </Container>
