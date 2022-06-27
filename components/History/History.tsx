@@ -49,9 +49,9 @@ const History = () => {
   return (
     <Container className="my-lg-4 text-white">
       {transaction?.map((transaction: Transaction) => (
-        <Card className="bg-dark my-lg-2">
-          <div>
-            <React.Fragment key={transaction.transactionId}>
+        <React.Fragment key={transaction.transactionId}>
+          <Card className="bg-dark my-lg-2">
+            <div>
               <>
                 <Card.Title className="text-center border-white border-bottom">
                   Transaction ID: {transaction.transactionId}
@@ -62,9 +62,9 @@ const History = () => {
                   <p>Status: {transaction.status}</p>
                 </Card.Body>
               </>
-            </React.Fragment>
-          </div>
-        </Card>
+            </div>
+          </Card>{" "}
+        </React.Fragment>
       ))}
     </Container>
   );
