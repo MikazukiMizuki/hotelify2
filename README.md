@@ -1,7 +1,7 @@
 Hotelify Web Project Description:
 # Deployment Failed
 # Screenshoot can be found in documentation.docx
-# Website created using Prisma, PostgreSQL, and Next.js
+# Website created using Prisma, PostgreSQL, Auth0, and Next.js
 
 
 Step to run this project locally
