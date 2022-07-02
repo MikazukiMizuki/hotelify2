@@ -63,7 +63,7 @@ const History = () => {
                 </Card.Body>
               </>
             </div>
-          </Card>{" "}
+          </Card>
         </React.Fragment>
       ))}
     </Container>
